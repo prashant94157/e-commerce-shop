@@ -90,8 +90,7 @@ const ProductScreen = () => {
                     <Row>
                       <Col>Qty</Col>
                       <Col>
-                        <Form.Control
-                          as='select'
+                        <Form.Select
                           value={qty}
                           onChange={(e) => setQty(e.target.value)}
                         >
@@ -100,23 +99,21 @@ const ProductScreen = () => {
                               {q + 1}
                             </option>
                           ))}
-                        </Form.Control>
+                        </Form.Select>
                       </Col>
                     </Row>
                   </ListGroup.Item>
                 )}
 
-                <ListGroup.Item>
-                  <div className='d-grid'>
-                    <Button
-                      onClick={addToCartHandler}
-                      className='btn-block'
-                      type='button'
-                      disabled={product.countInStock === 0}
-                    >
-                      Add to cart
-                    </Button>
-                  </div>
+                <ListGroup.Item className='d-grid'>
+                  <Button
+                    onClick={addToCartHandler}
+                    className='btn-block'
+                    type='button'
+                    disabled={product.countInStock === 0}
+                  >
+                    Add to cart
+                  </Button>
                 </ListGroup.Item>
               </ListGroup>
             </Card>
