@@ -11,7 +11,7 @@ node_modules/
 
 # production
 /build
-data
+/data
 # misc
 .DS_Store
 .env
