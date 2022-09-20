@@ -8,6 +8,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import { Container } from 'react-bootstrap';
 import CartScreen from './screens/CartScreen';
+import LoginScreen from './screens/LoginScreen';
+import RegisterScreen from './screens/RegisterScreen';
+import ProfileScreen from './screens/ProfileScreen';
 
 const App = () => {
   return (
@@ -16,10 +19,13 @@ const App = () => {
       <main className='py-3'>
         <Container>
           <Routes>
-            <Route path='/' element={<HomeScreen />} />
+            <Route path='/login' element={<LoginScreen />} />
+            <Route path='/register' element={<RegisterScreen />} />
+            <Route path='/profile' element={<ProfileScreen />} />
             <Route path='/products/:id' element={<ProductScreen />} />
             <Route path='/cart' element={<CartScreen />} />
             <Route path='/cart/:id' element={<CartScreen />} />
+            <Route path='/' element={<HomeScreen />} />
           </Routes>
         </Container>
       </main>
