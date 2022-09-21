@@ -22,7 +22,8 @@ const LoginScreen = () => {
   const navigate = useNavigate();
   useEffect(() => {
     if (userInfo) {
-      navigate(redirect);
+      // console.log(redirect);
+      navigate(`../${redirect}`);
     }
   }, [userInfo, navigate, redirect]);
 
@@ -36,7 +37,7 @@ const LoginScreen = () => {
       {error && <Message variant='danger'>{error}</Message>}
       {loading && <Loader />}
       <Form onSubmit={submitHandler}>
-        <Form.Group controlId='email'>
+        <Form.Group controlId='email' className='pb-3'>
           <Form.Label>Email Address</Form.Label>
           <Form.Control
             type='email'
@@ -47,7 +48,7 @@ const LoginScreen = () => {
           ></Form.Control>
         </Form.Group>
 
-        <Form.Group controlId='password' className='pt-3 pb-3'>
+        <Form.Group controlId='password' className='pb-3'>
           <Form.Label>Password</Form.Label>
           <Form.Control
             type='password'
@@ -58,7 +59,7 @@ const LoginScreen = () => {
           ></Form.Control>
         </Form.Group>
 
-        <Button type='submit' variant='primary'>
+        <Button type='submit' variant='primary' className='rounded'>
           Sign In
         </Button>
       </Form>

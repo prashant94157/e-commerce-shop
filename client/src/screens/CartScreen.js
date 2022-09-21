@@ -17,7 +17,6 @@ import {
 } from 'react-bootstrap';
 import Message from '../components/Message';
 import { addToCart, removeFromCart } from '../actions/cartActions';
-import { CART_ADD_ITEM } from '../constants/cartConstants';
 
 const CartScreen = () => {
   const { id } = useParams();
@@ -114,7 +113,7 @@ const CartScreen = () => {
             <ListGroup.Item className='d-grid'>
               <Button
                 type='button'
-                className='btn-block'
+                className='btn-block rounded'
                 disabled={cartItems.length === 0}
                 onClick={checkoutHandler}
               >
