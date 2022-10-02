@@ -1,7 +1,9 @@
 import axios from 'axios';
+import { ORDER_GET_MY_ORDERS_RESET } from '../constants/orderConstants';
 import {
   USER_DETAILS_FAIL,
   USER_DETAILS_REQUEST,
+  USER_DETAILS_RESET,
   USER_DETAILS_SUCCESS,
   USER_LOGIN_FAIL,
   USER_LOGIN_REQUEST,
@@ -94,10 +96,16 @@ const logout = () => (dispatch) => {
   localStorage.removeItem('userInfo');
   localStorage.removeItem('cartItems');
 
+
   dispatch({
     type: USER_LOGOUT,
   });
-
+  dispatch({
+    type: USER_DETAILS_RESET
+  })
+  dispatch({
+    type: ORDER_GET_MY_ORDERS_RESET
+  })
   // document.location.href = '/login';
 };
 
