@@ -1,3 +1,9 @@
 {
-  "cSpell.words": ["myorders", "placeorder"]
+  "cSpell.words": [
+    "myorders",
+    "orderlist",
+    "placeorder",
+    "productlist",
+    "userlist"
+  ]
 }
