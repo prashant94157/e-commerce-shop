@@ -16,7 +16,7 @@ const reviewSchema = mongoose.Schema(
     },
   },
   {
-    timeStamp: true,
+    timestamps: true,
   }
 );
 

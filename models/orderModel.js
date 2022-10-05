@@ -97,7 +97,7 @@ const orderSchema = mongoose.Schema(
     },
   },
   {
-    timeStamp: true,
+    timestamps: true,
   }
 );
 

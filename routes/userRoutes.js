@@ -11,7 +11,7 @@ import {
   updateUser,
   getUserById,
 } from '../controllers/userControllers.js';
-import { protect, admin } from '../middlewares/authMiddleware.js';
+import { protect, admin } from '../middlewares/authMiddlewares.js';
 
 router.post('/login', authUser);
 router
