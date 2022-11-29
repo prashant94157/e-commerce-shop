@@ -6,7 +6,10 @@ const db = process.env.MONGO_URI;
 
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect(db);
+    const conn = await mongoose.connect(db, {
+      useUnifiedTopology: true,
+      useNewUrlParser: true,
+    });
 
     console.log(`MongoDB connected: ${conn.connection.host}`.cyan.underline);
   } catch (err) {
